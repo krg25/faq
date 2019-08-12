@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class Reply extends Model
 {
     protected $fillable = ['body'];
 
@@ -14,12 +14,8 @@ class Answer extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function question()
+    public function answer()
     {
-        return $this->belongsTo('App\Question');
-    }
-    public function replies()
-    {
-        return $this->hasMany('App\Reply');
+        return $this->belongsTo('App\Answer');
     }
 }

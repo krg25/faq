@@ -22,5 +22,34 @@
 
             </div>
         </div>
+
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><a class="btn btn-primary float-left"
+                                        href="{{ route('replies.create', ['answer_id'=> $answer->id, 'question_id'=>$question])}}">
+                    Reply to Answer
+                </a></div>
+
+            <div class="card-body">
+                @forelse($answer->replies as $reply)
+                    <div class="card">
+                        <div class="card-body">{{$reply->body}}</div>
+                        <div class="card-footer">
+
+
+                        </div>
+                    </div>
+                @empty
+                    <div class="card">
+
+                        <div class="card-body"> No Replies</div>
+                    </div>
+                @endforelse
+
+
+            </div>
+        </div>
+    </div>
     </div>
 @endsection
