@@ -15,3 +15,5 @@ To use this feature:
 3. Navigate to an answer, or create one
 4. Click the button below the anser marked "Reply to Answer"
 5. Write your reply and submit it
+
+Link to heroku: http://krg25faq.herokuapp.com/
